@@ -4,6 +4,7 @@ package agetic.gob.bo.marcacionesrrhh.db.model;
  * Created by ramiro on 20-07-16.
  */
 public class User {
+    private int _id;
     private String _token;
     private String _uid;
     private String _password;
@@ -11,13 +12,14 @@ public class User {
     private String _email;
     private String _position;
 
-    public User(String _token, String _position, String _email, String _name, String _password, String _uid) {
+    public User(String _token, String _uid, String _password, String _name, String _email, String _position) {
         this._token = _token;
-        this._position = _position;
-        this._email = _email;
-        this._name = _name;
-        this._password = _password;
         this._uid = _uid;
+        this._password = _password;
+        this._name = _name;
+        this._email = _email;
+        this._position = _position;
+
     }
 
     public String get_token() {
@@ -28,28 +30,12 @@ public class User {
         this._token = _token;
     }
 
-    public String get_position() {
-        return _position;
+    public String get_uid() {
+        return _uid;
     }
 
-    public void set_position(String _position) {
-        this._position = _position;
-    }
-
-    public String get_email() {
-        return _email;
-    }
-
-    public void set_email(String _email) {
-        this._email = _email;
-    }
-
-    public String get_name() {
-        return _name;
-    }
-
-    public void set_name(String _name) {
-        this._name = _name;
+    public void set_uid(String _uid) {
+        this._uid = _uid;
     }
 
     public String get_password() {
@@ -60,11 +46,27 @@ public class User {
         this._password = _password;
     }
 
-    public String get_uid() {
-        return _uid;
+    public String get_name() {
+        return _name;
     }
 
-    public void set_uid(String _uid) {
-        this._uid = _uid;
+    public void set_name(String _name) {
+        this._name = _name;
+    }
+
+    public String get_email() {
+        return _email;
+    }
+
+    public void set_email(String _email) {
+        this._email = _email;
+    }
+
+    public String get_position() {
+        return _position;
+    }
+
+    public void set_position(String _position) {
+        this._position = _position;
     }
 }
