@@ -1,5 +1,6 @@
 package agetic.gob.bo.marcacionesrrhh.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -12,6 +13,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import agetic.gob.bo.marcacionesrrhh.R;
 
@@ -24,6 +26,22 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        /**
+         ** start login
+         **/
+        //session = new SessionManager(getApplicationContext());
+        //if (session.isLoggedIn())
+        if(false){
+            Toast.makeText(MainActivity.this, "Bienvenid@!", Toast.LENGTH_SHORT).show();
+        }else{
+            Intent i = new Intent(MainActivity.this, LoginActivity.class);
+            startActivity(i);
+            finish();
+        }
+        /**
+         ** end login
+         **/
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -82,17 +100,13 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.nav_my_marks) {
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        }  else if (id == R.id.nav_about) {
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.nav_settings) {
 
-        } else if (id == R.id.nav_manage) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.nav_logout) {
 
         }
 
