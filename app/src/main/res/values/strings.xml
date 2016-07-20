@@ -5,4 +5,8 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Configuración</string>
+    <string name="prompt_user">usuario</string>
+    <string name="prompt_password">contraseña</string>
+    <string name="action_sign_in">ingresar</string>
+    <string name="action_sign_in_short">hola</string>
 </resources>
