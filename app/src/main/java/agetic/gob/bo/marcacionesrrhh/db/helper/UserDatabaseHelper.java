@@ -26,13 +26,14 @@ public class UserDatabaseHelper extends SQLiteOpenHelper {
     private static final String COLUMN_EMAIL = "email";
     private static final String COLUMN_POSITION = "position";
     //query: create table a (b text, c text);
+    // CREATE TABLE users (_id INTEGER PRIMARY KEY AUTOINCREMENT, token TEXT, uid TEXT, password TEXT, name TEXT, email TEXT, position TEXT);
     private static final String CREATE_USER_TABLE_QUERY = "CREATE TABLE " + TABLE_NAME +
             " (" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "+
-            COLUMN_TOKEN + " TEXT" +
-            COLUMN_UID + " TEXT" +
-            COLUMN_PASSWORD + " TEXT" +
-            COLUMN_NAME + " TEXT" +
-            COLUMN_EMAIL + " TEXT" +
+            COLUMN_TOKEN + " TEXT, " +
+            COLUMN_UID + " TEXT, " +
+            COLUMN_PASSWORD + " TEXT, " +
+            COLUMN_NAME + " TEXT, " +
+            COLUMN_EMAIL + " TEXT, " +
             COLUMN_POSITION + " TEXT" +
             ");";
 
